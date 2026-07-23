@@ -1,374 +1,437 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Social Jorginho SOS | Capacitação, Saúde e Apoio Comunitário</title>
+    <title>Centro Social Jorginho — Transformando Ramos e Região</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
-                            blue: '#1E3A8A',
-                            sky: '#0284C7',
-                            yellow: '#EAB308',
-                            dark: '#0F172A',
-                            light: '#F8FAFC',
-                            green: '#16A34A'
+                            green: '#10B981',
+                            greenDark: '#047857',
+                            navy: '#0F172A',
+                            accent: '#F59E0B'
                         }
                     }
                 }
             }
         }
     </script>
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1E3A8A 0%, #0284C7 100%);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
-<body class="font-sans bg-brand-light text-brand-dark antialiased">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5521969552215?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos%20e%20atendimentos%20do%20Centro%20Social." 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 active:scale-95 duration-300">
-        <i data-lucide="message-circle" class="w-7 h-7 fill-white"></i>
-        <span class="absolute right-14 bg-brand-dark text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-md pointer-events-none md:block hidden">
-            Fale conosco no WhatsApp
-        </span>
-    </a>
-
-    <!-- Header / Navbar -->
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <!-- Logo Section -->
-            <div class="flex items-center gap-3">
-                <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-brand-blue to-brand-sky p-0.5 flex items-center justify-center overflow-hidden shadow-md">
-                    <img src="logo_jorginho.png" alt="Centro Social Jorginho Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="h-full w-full object-cover rounded-lg">
-                    <div style="display:none;" class="h-full w-full items-center justify-center text-white font-bold text-lg bg-brand-blue">CSJ</div>
+    <!-- NAV BAR -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-green flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    CSJ
                 </div>
                 <div>
-                    <span class="font-bold text-lg md:text-xl tracking-tight text-brand-blue block leading-none">CENTRO SOCIAL</span>
-                    <span class="text-xs font-bold tracking-widest text-brand-sky block uppercase">Jorginho da SOS</span>
+                    <span class="text-lg font-bold text-slate-900 block leading-none">Centro Social</span>
+                    <span class="text-sm text-brand-green font-semibold">Jorginho</span>
                 </div>
-            </div>
+            </a>
 
-            <!-- Contact Buttons (Desktop) -->
-            <div class="hidden md:flex items-center gap-6">
-                <a href="https://instagram.com/centrosocialjorginho" target="_blank" class="flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-brand-sky transition-colors">
-                    <i data-lucide="instagram" class="w-4 h-4 text-brand-sky"></i>
-                    @centrosocialjorginho
-                </a>
-                <a href="https://wa.me/5521969552215?text=Ol%C3%A1!%20Quero%20me%20inscrever%20em%20um%20curso." 
-                   target="_blank" 
-                   class="bg-brand-sky hover:bg-brand-blue text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2">
-                    <i data-lucide="user-plus" class="w-4 h-4"></i>
-                    Inscrições Abertas
-                </a>
-            </div>
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#cursos" class="hover:text-brand-green transition-colors">Cursos</a>
+                <a href="#saude" class="hover:text-brand-green transition-colors">Saúde & Serviços</a>
+                <a href="#depoimentos" class="hover:text-brand-green transition-colors">Histórias</a>
+                <a href="#parceiros" class="hover:text-brand-green transition-colors">Empresas</a>
+            </nav>
 
-            <!-- Mobile Contact Trigger -->
-            <a href="https://wa.me/5521969552215" class="md:hidden flex items-center justify-center p-2 text-brand-blue" aria-label="WhatsApp">
-                <i data-lucide="message-square" class="w-6 h-6 text-brand-sky"></i>
+            <a href="https://wa.me/5521969552215?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20Centro%20Social." 
+               target="_blank"
+               class="bg-brand-green hover:bg-brand-greenDark text-white font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-brand-green/20 transition-all flex items-center gap-2">
+                <i class="fa-brands font-semibold fa-whatsapp text-lg"></i>
+                <span>Contato</span>
             </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative gradient-bg text-white overflow-hidden py-16 md:py-24">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FFF_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-emerald-900 via-slate-900 to-slate-900 text-white pt-16 pb-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#10B981_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <!-- Hero Text Content -->
-                <div class="md:col-span-7 space-y-6 text-center md:text-left">
-                    <span class="inline-block bg-white/10 backdrop-blur-md text-brand-yellow text-xs md:text-sm font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border border-white/10">
-                        Transformação Social em Ramos & em todo Complexo do Alemão
-                    </span>
-                    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
-                        Oportunidades, Saúde e Capacitação para Nossa Gente.
-                    </h1>
-                    <p class="text-white/80 text-base md:text-lg max-w-xl font-light">
-                        Oferecemos cursos profissionalizantes, atendimento de saúde popular e ações comunitárias gratuitas para fortalecer nossa comunidade.
-                    </p>
-                    
-                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#servicos" 
-                           class="bg-brand-yellow text-brand-dark hover:bg-white hover:text-brand-blue px-8 py-4 rounded-full font-bold text-base shadow-lg transition-all duration-300 flex items-center justify-center gap-3">
-                            <i data-lucide="book-open" class="w-5 h-5"></i>
-                            Conhecer Nossos Cursos
-                        </a>
-                        <a href="https://wa.me/5521969652215?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento." 
-                           target="_blank"
-                           class="border border-white/30 hover:border-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 flex items-center justify-center gap-2">
-                            Agendar Atendimento
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Card -->
-                <div class="md:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 space-y-6 shadow-2xl">
-                    <div class="flex items-center gap-4">
-                        <div class="bg-brand-yellow/20 p-3 rounded-xl text-brand-yellow">
-                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Qualificação Rápida</h4>
-                            <p class="text-xs text-white/70">Cursos com certificado e parcerias EAD</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="bg-brand-yellow/20 p-3 rounded-xl text-brand-yellow">
-                            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Saúde Popular</h4>
-                            <p class="text-xs text-white/70">Fisioterapia, Odontologia e Funcional</p>
-                        </div>
-                    </div>
-                    <div class="bg-white/10 rounded-xl p-4 text-center border border-white/10">
-                        <p class="text-sm font-bold text-white">Galpão do Jorginho da SOS</p>
-                        <p class="text-xs text-white/80 mt-1">Estrada do Itararé, 320 — Ramos / Alemão</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Bar -->
-    <section class="py-8 bg-brand-yellow text-brand-dark">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-                <p class="text-3xl font-extrabold">+Cursos</p>
-                <p class="text-xs font-semibold uppercase tracking-wider">Gastronomia & EAD</p>
-            </div>
-            <div>
-                <p class="text-3xl font-extrabold">Gratuito</p>
-                <p class="text-xs font-semibold uppercase tracking-wider">Apoio à Comunidade</p>
-            </div>
-            <div>
-                <p class="text-3xl font-extrabold">Saúde</p>
-                <p class="text-xs font-semibold uppercase tracking-wider">Fisioterapia e Odonto</p>
-            </div>
-            <div>
-                <p class="text-3xl font-extrabold">Futuro</p>
-                <p class="text-xs font-semibold uppercase tracking-wider">Reforço Infantil</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services & Activities Section -->
-    <section id="servicos" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                <span class="text-brand-sky font-bold tracking-wider text-sm uppercase">O Que Oferecemos</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue">Projetos e Atividades</h2>
-                <div class="h-1 w-16 bg-brand-yellow mx-auto rounded-full"></div>
-                <p class="text-slate-500 font-light">Trabalhamos diariamente para levar autonomia, qualificação e saúde para as famílias do Complexo, Ramos e região.</p>
-            </div>
-
-            <!-- Grid of Activities -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Card 1 -->
-                <div class="bg-brand-light rounded-2xl p-6 border border-slate-100 hover:border-brand-sky/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-sky/10 flex items-center justify-center text-brand-sky mb-6 group-hover:bg-brand-sky group-hover:text-white transition-all duration-300">
-                            <i data-lucide="utensils" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-blue mb-2">Gastronomia Sustentável</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Aulas práticas de culinária e aproveitamento integral dos alimentos em parceria com projetos como a Gastromotiva.</p>
-                    </div>
-                    <a href="https://wa.me/5521969552215?text=Quero%20saber%20sobre%20o%20Curso%20de%20Gastronomia" target="_blank" class="text-xs font-bold text-brand-sky flex items-center gap-1 group-hover:gap-2 transition-all">Quero me inscrever <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-brand-light rounded-2xl p-6 border border-slate-100 hover:border-brand-sky/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-sky/10 flex items-center justify-center text-brand-sky mb-6 group-hover:bg-brand-sky group-hover:text-white transition-all duration-300">
-                            <i data-lucide="award" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-blue mb-2">Supletivo & Bolsas EAD</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Conclusão de estudos em até 6 meses, bolsas de graduação e reforço escolar com emissão de certificado e formatura.</p>
-                    </div>
-                    <a href="https://wa.me/5521969552215?text=Quero%20saber%20sobre%20Bolsas%20EAD%20e%20Supletivo" target="_blank" class="text-xs font-bold text-brand-sky flex items-center gap-1 group-hover:gap-2 transition-all">Quero me inscrever <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-brand-light rounded-2xl p-6 border border-slate-100 hover:border-brand-sky/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-sky/10 flex items-center justify-center text-brand-sky mb-6 group-hover:bg-brand-sky group-hover:text-white transition-all duration-300">
-                            <i data-lucide="activity" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-blue mb-2">Fisioterapia & Saúde</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Atendimentos comunitários de fisioterapia popular para reabilitação e alívio de dores de moradores da região.</p>
-                    </div>
-                    <a href="https://wa.me/5521969552215?text=Quero%20agendar%20Fisioterapia" target="_blank" class="text-xs font-bold text-brand-sky flex items-center gap-1 group-hover:gap-2 transition-all">Agendar atendimento <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-brand-light rounded-2xl p-6 border border-slate-100 hover:border-brand-sky/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-sky/10 flex items-center justify-center text-brand-sky mb-6 group-hover:bg-brand-sky group-hover:text-white transition-all duration-300">
-                            <i data-lucide="smile" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-blue mb-2">Saúde Bucal / Odonto</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Ações comunitárias de higiene e orientação em saúde bucal para crianças, jovens e adultos.</p>
-                    </div>
-                    <a href="https://wa.me/5521969552215?text=Quero%20saber%20sobre%20A%C3%A7%C3%B5es%20de%20Odonto" target="_blank" class="text-xs font-bold text-brand-sky flex items-center gap-1 group-hover:gap-2 transition-all">Saber mais <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-brand-light rounded-2xl p-6 border border-slate-100 hover:border-brand-sky/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-sky/10 flex items-center justify-center text-brand-sky mb-6 group-hover:bg-brand-sky group-hover:text-white transition-all duration-300">
-                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-blue mb-2">Funcional & Movimento</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Aulas coletivas de treino funcional para incentivar a prática de atividades físicas, saúde e bem-estar.</p>
-                    </div>
-                    <a href="https://wa.me/5521969552215?text=Quero%20participar%20do%20Treino%20Funcional" target="_blank" class="text-xs font-bold text-brand-sky flex items-center gap-1 group-hover:gap-2 transition-all">Quero participar <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="bg-brand-light rounded-2xl p-6 border border-slate-100 hover:border-brand-sky/30 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-sky/10 flex items-center justify-center text-brand-sky mb-6 group-hover:bg-brand-sky group-hover:text-white transition-all duration-300">
-                            <i data-lucide="heart" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-brand-blue mb-2">Casamento Comunitário</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Realização do sonho do matrimônio de forma acessível e digna para os casais da nossa comunidade.</p>
-                    </div>
-                    <a href="https://wa.me/5521969552215?text=Quero%20informa%C3%A7%C3%B5es%20sobre%20o%20Casamento%20Comunit%C3%A1rio" target="_blank" class="text-xs font-bold text-brand-sky flex items-center gap-1 group-hover:gap-2 transition-all">Saber mais <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration / Pre-enrollment Section -->
-    <section class="py-20 bg-slate-100 border-y border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
-            <span class="bg-brand-sky/10 text-brand-sky font-bold text-xs uppercase px-4 py-1.5 rounded-full">Pré-Inscrição Rápida</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue">Deseja se inscrever em alguma atividade?</h2>
-            <p class="text-slate-600 max-w-xl mx-auto font-light">
-                Toque no botão abaixo e fale diretamente com a equipe do Centro Social pelo WhatsApp. Informe o seu nome e a atividade de seu interesse para garantir sua vaga!
-            </p>
-            <div class="pt-4">
-                <a href="https://wa.me/5521969552215?text=Ol%C3%A1!%20Gostaria%20de%20me%20cadastrar%20para%20as%20atividades%20do%20Centro%20Social." 
-                   target="_blank" 
-                   class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebd53] text-white px-8 py-4 rounded-full font-bold text-base shadow-lg transition-transform hover:scale-105">
-                    <i data-lucide="message-circle" class="w-6 h-6 fill-white"></i>
-                    Iniciar Cadastro pelo WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location Section -->
-    <section id="contato" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <span class="text-brand-sky font-bold tracking-wider text-sm uppercase">Nossa Sede</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue">Venha nos fazer uma visita</h2>
-                    <p class="text-slate-600 font-light">
-                        O Galpão do Jorginho da SOS está de portas abertas para acolher os moradores de Ramos, Itararé e Complexo do Alemão.
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-semibold">
+                        <i class="fa-solid fa-location-dot"></i> Ramos & Estrada do Itararé
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Transformando vidas e qualificando o <span class="text-brand-green">futuro do nosso bairro.</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed">
+                        Cursos profissionalizantes gratuitos, atendimento de saúde popular e fortalecimento da comunidade e do comércio local em Ramos.
                     </p>
                     
-                    <div class="space-y-4 pt-4">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-brand-sky/10 text-brand-sky p-3 rounded-lg mt-1 shrink-0">
-                                <i data-lucide="map-pin" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-blue">Endereço</h4>
-                                <p class="text-slate-600 text-sm">Estrada do Itararé, 320<br>Galpão do Jorginho da SOS<br>Ramos / Itararé, Rio de Janeiro - RJ</p>
-                            </div>
-                        </div>
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#cursos" class="bg-brand-green hover:bg-brand-greenDark text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-brand-green/30 transition-all text-center">
+                            Conhecer Cursos Abertos
+                        </a>
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20agendar%20um%20atendimento%20de%20saúde." 
+                           target="_blank"
+                           class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all text-center backdrop-blur-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-check"></i> Agendar Atendimento
+                        </a>
+                    </div>
+                </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="bg-brand-sky/10 text-brand-sky p-3 rounded-lg mt-1 shrink-0">
-                                <i data-lucide="phone" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-blue">WhatsApp de Contato</h4>
-                                <p class="text-slate-600 text-sm">(21) 96955-2215</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="bg-brand-sky/10 text-brand-sky p-3 rounded-lg mt-1 shrink-0">
-                                <i data-lucide="instagram" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-blue">Instagram</h4>
-                                <p class="text-slate-600 text-sm">@centrosocialjorginho</p>
+                <!-- Imagem Destaque (Placeholder) -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-green to-teal-500 blur-lg opacity-40"></div>
+                        <div class="relative bg-slate-800 border border-slate-700/60 rounded-2xl overflow-hidden shadow-2xl">
+                            <!-- PLACEHOLDER IMAGEM PRINCIPAL -->
+                            <div class="h-80 sm:h-96 bg-slate-700 flex flex-col items-center justify-center text-slate-400 p-6 text-center">
+                                <i class="fa-solid fa-image text-5xl mb-3 text-slate-500"></i>
+                                <span class="text-sm font-semibold text-slate-300">[ FOTO DESTAQUE ]</span>
+                                <span class="text-xs mt-1">Substituir por foto real da turma, formatura ou fachada do Galpão.</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Google Maps Embed -->
-                <div class="relative bg-slate-100 rounded-3xl h-96 overflow-hidden border border-slate-200 shadow-xl">
-                    <iframe 
-                        class="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.621000000000!2d-43.2620000!3d-22.8350000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99796e00000000%3A0x0!2sEstr.%20do%20Itarar%C3%A9%2C%20320%20-%20Ramos%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- NÚMEROS / IMPACTO -->
+    <section class="bg-white border-y border-slate-200/80 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <!-- PLACEHOLDER NÚMERO REAL -->
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900">+500</span>
+                    <span class="text-sm font-medium text-slate-500 mt-1 block">Alunos Formados</span>
+                </div>
+                <div class="p-4">
+                    <!-- PLACEHOLDER NÚMERO REAL -->
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-brand-green">+1.200</span>
+                    <span class="text-sm font-medium text-slate-500 mt-1 block">Atendimentos de Saúde</span>
+                </div>
+                <div class="p-4">
+                    <!-- PLACEHOLDER NÚMERO REAL -->
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900">+10</span>
+                    <span class="text-sm font-medium text-slate-500 mt-1 block">Projetos & Parceiros</span>
+                </div>
+                <div class="p-4">
+                    <span class="block text-3xl sm:text-4xl font-extrabold text-brand-green">100%</span>
+                    <span class="text-sm font-medium text-slate-500 mt-1 block">Gratuito / Popular</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 space-y-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                    <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-blue to-brand-sky p-0.5 flex items-center justify-center overflow-hidden">
-                        <img src="logo_jorginho.png" alt="Logo Centro Social" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="h-full w-full object-cover rounded-lg">
-                        <div style="display:none;" class="h-full w-full items-center justify-center text-white font-bold text-xs bg-brand-blue">CSJ</div>
+    <!-- SEÇÃO DE CURSOS -->
+    <section id="cursos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-green uppercase mb-2">Capacitação Profissional</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Cursos & Oportunidades</p>
+                <p class="mt-4 text-slate-600">Aprenda novas habilidades, conquiste seu certificado e prepare-se para o mercado de trabalho local.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- CARD CURSO 1 (Real: Gastronomia) -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 relative">
+                        <!-- PLACEHOLDER FOTO CURSO -->
+                        <i class="fa-solid fa-utensils text-4xl"></i>
+                        <span class="absolute top-3 right-3 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Inscrições Abertas</span>
                     </div>
-                    <div>
-                        <span class="font-bold text-base text-white block leading-none">CENTRO SOCIAL JORGINHO DA SOS</span>
-                        <span class="text-[10px] tracking-widest text-brand-sky font-bold block uppercase">Capacitação e Saúde Comunitária</span>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Gastronomia Sustentável</h3>
+                            <p class="text-slate-600 text-sm mb-4">Técnicas de culinária, aproveitamento integral dos alimentos e noções de empreendedorismo em parceria com Gastromotiva.</p>
+                            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-certificate text-brand-green"></i> Com Certificação</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-brand-green"></i> [Duração: X Semanas]</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20Gastronomia." 
+                           target="_blank"
+                           class="w-full bg-slate-900 hover:bg-brand-green text-white font-bold py-3 rounded-xl transition-colors text-center block">
+                            Quero me Inscrever
+                        </a>
                     </div>
                 </div>
-                <div class="text-sm text-center md:text-right">
-                    <p class="font-semibold text-white">Juntos pela Comunidade</p>
-                    <p class="text-xs text-slate-500">Estrada do Itararé, 320 — Ramos / Itararé</p>
+
+                <!-- CARD CURSO 2 (Real: Bolsas/Reforço) -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 relative">
+                        <!-- PLACEHOLDER FOTO CURSO -->
+                        <i class="fa-solid fa-graduation-cap text-4xl"></i>
+                        <span class="absolute top-3 right-3 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Fluxo Contínuo</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Bolsas EAD & Supletivo</h3>
+                            <p class="text-slate-600 text-sm mb-4">Apoio para conclusão de estudos (Ensino Médio em 6 meses) e encaminhamento para bolsas universitárias.</p>
+                            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-certificate text-brand-green"></i> Conclusão Rápida</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-book-open text-brand-green"></i> Suporte Completo</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20informações%20sobre%20Bolsas%20e%20Supletivo." 
+                           target="_blank"
+                           class="w-full bg-slate-900 hover:bg-brand-green text-white font-bold py-3 rounded-xl transition-colors text-center block">
+                            Saber Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD CURSO 3 (Placeholder Generico para Proximo Curso) -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 relative">
+                        <!-- PLACEHOLDER FOTO CURSO -->
+                        <i class="fa-solid fa-laptop-code text-4xl"></i>
+                        <span class="absolute top-3 right-3 bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">Em Breve</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">[ Nome do Novo Curso ]</h3>
+                            <p class="text-slate-600 text-sm mb-4">[ Descrição curta da nova capacitação a ser divulgada pelo cliente no envio dos dados ].</p>
+                            <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-certificate text-brand-green"></i> Aulas Práticas</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-brand-green"></i> [ Horário a definir ]</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20entrar%20na%20lista%20de%20espera%20dos%20novos%20cursos." 
+                           target="_blank"
+                           class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl transition-colors text-center block">
+                            Entrar na Lista de Espera
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE SAÚDE E SERVIÇOS -->
+    <section id="saude" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-sm font-bold tracking-widest text-brand-green uppercase">Ação Social & Saúde</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Cuidado e bem-estar ao alcance de quem precisa.
+                    </h2>
+                    <p class="text-slate-600">
+                        Atendimentos regulares com foco na promoção da saúde, reabilitação e cidadania para todas as idades.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-brand-green flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-user-doctor text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Fisioterapia Popular</h4>
+                                <p class="text-sm text-slate-500">Avaliações e sessões direcionadas para reabilitação e alívio de dores.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-brand-green flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-tooth text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Saúde Bucal & Odonto</h4>
+                                <p class="text-sm text-slate-500">Ações comunitárias de orientação, higiene e prevenção dentária.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-brand-green flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-person-running text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Treino Funcional</h4>
+                                <p class="text-sm text-slate-500">Atividades físicas em grupo para a promoção do movimento e vitalidade.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20de%20Saúde." 
+                           target="_blank" 
+                           class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-greenDark text-white font-bold px-6 py-3.5 rounded-xl shadow-md transition-all">
+                            <i class="fa-brands fa-whatsapp"></i> Agendar Atendimento
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-slate-100 rounded-3xl p-8 border border-slate-200">
+                    <div class="text-center md:text-left mb-6">
+                        <h3 class="text-xl font-bold text-slate-900">Casamento Comunitário & Cidadania</h3>
+                        <p class="text-sm text-slate-600 mt-1">Garantindo a regularização civil e promovendo momentos marcantes para as famílias do bairro.</p>
+                    </div>
+                    
+                    <!-- PLACEHOLDER GALERIA/IMAGEM SAÚDE -->
+                    <div class="h-64 bg-slate-300 rounded-2xl flex flex-col items-center justify-center text-slate-500 p-6 text-center">
+                        <i class="fa-solid fa-heart text-4xl mb-2 text-slate-400"></i>
+                        <span class="text-sm font-semibold">[ FOTO AÇÃO SOCIAL / CASAMENTO COMUNITÁRIO ]</span>
+                        <span class="text-xs text-slate-400 mt-1">Substituir por fotos de ações sociais passadas</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS / PROVA SOCIAL -->
+    <section id="depoimentos" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-green uppercase mb-2">Transformação Real</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold">Histórias da Nossa Gente</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- DEPOIMENTO PLACEHOLDER 1 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative">
+                    <i class="fa-solid fa-quote-right text-3xl text-brand-green/30 absolute top-6 right-6"></i>
+                    <p class="text-slate-300 italic mb-6">
+                        "[ Insira o depoimento real do aluno aqui. Exemplo: O curso de culinária mudou a minha perspectiva. Consegui aplicar o aprendizado e abrir minha própria renda local! ]"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-brand-green">
+                            [A1]
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">[ Nome do Aluno(a) ]</h4>
+                            <span class="text-xs text-slate-400">Formado em Gastronomia Sustentável</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEPOIMENTO PLACEHOLDER 2 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative">
+                    <i class="fa-solid fa-quote-right text-3xl text-brand-green/30 absolute top-6 right-6"></i>
+                    <p class="text-slate-300 italic mb-6">
+                        "[ Insira o depoimento de um morador atendido na fisioterapia ou ação de saúde aqui. Exemplo: O atendimento de fisioterapia perto de casa fez toda a diferença para o meu dia a dia. ]"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-brand-green">
+                            [M1]
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">[ Nome do Beneficiado ]</h4>
+                            <span class="text-xs text-slate-400">Atendido na Fisioterapia Popular</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONEXÃO COM O COMÉRCIO LOCAL / EMPRESAS -->
+    <section id="parceiros" class="py-20 bg-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+                    Juntos por Ramos
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Você tem um comércio ou empresa em Ramos?
+                </h2>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    Apoie o Centro Social Jorginho. Ao fortalecer a qualificação profissional da nossa comunidade, você ajuda a formar mão de obra capacitada e impulsiona a economia local do nosso bairro.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/5521969552215?text=Olá!%20Sou%20comerciante/empresário%20em%20Ramos%20e%20gostaria%20de%20ser%20um%20parceiro." 
+                       target="_blank"
+                       class="bg-brand-green hover:bg-brand-greenDark text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
+                        Seja um Comércio Parceiro
+                    </a>
+                </div>
+
+                <!-- PLACEHOLDER LOGOS PARCEIROS -->
+                <div class="pt-12">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Parceiros e Apoiadores Estratégicos</p>
+                    <div class="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
+                        <span class="font-bold text-slate-600 text-sm">[ Logo Gastromotiva ]</span>
+                        <span class="font-bold text-slate-600 text-sm">[ Logo Faculdade Parceira ]</span>
+                        <span class="font-bold text-slate-600 text-sm">[ Logo Comércio Local 1 ]</span>
+                        <span class="font-bold text-slate-600 text-sm">[ Logo Comércio Local 2 ]</span>
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                <p>&copy; 2026 Centro Social Jorginho da SOS. Todos os direitos reservados.</p>
-                <p>Desenvolvido para fortalecer a comunicação comunitária local.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER & LOCALIZAÇÃO -->
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-12 gap-8 pb-12 border-b border-slate-800">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-green flex items-center justify-center text-white font-bold text-xl">
+                            CSJ
+                        </div>
+                        <div>
+                            <span class="text-lg font-bold text-white block leading-none">Centro Social</span>
+                            <span class="text-sm text-brand-green font-semibold">Jorginho</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 max-w-sm">
+                        Desenvolvendo autonomia, saúde e educação para a comunidade de Ramos, Itararé e região.
+                    </p>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Endereço & Atendimento</h4>
+                    <p class="text-sm flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot text-brand-green mt-1"></i>
+                        <span>Estrada do Itararé, 320 — Galpão do Jorginho da SOS<br>Ramos / Complexo do Alemão, Rio de Janeiro - RJ</span>
+                    </p>
+                    <p class="text-sm flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-brand-green"></i>
+                        <span>(21) 96955-2215</span>
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Redes Sociais</h4>
+                    <a href="https://www.instagram.com/centrosocialjorginho/" target="_blank" class="inline-flex items-center gap-2 text-slate-300 hover:text-brand-green transition-colors text-sm">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        <span>@centrosocialjorginho</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; Centro Social Jorginho. Todos os direitos reservados.</p>
+                <p class="text-slate-400">Projeto de Apoio ao Comércio Local de Ramos</p>
             </div>
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
