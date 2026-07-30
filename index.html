@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Social Jorginho — transformando o Complexo do Alemão e a Região</title>
+    <title>Centro Social Jorginho — Transformando Ramos e Região</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome (Ícones) -->
@@ -37,9 +37,11 @@
 
     <!-- NAV BAR -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <img src="logo_jorginho.png" alt="Logo Centro Social Jorginho" class="h-12 w-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 lg:py-4 flex items-center justify-between">
+            
+            <!-- LOGO COM DESTAQUE (Aumentada e com efeito ao passar o mouse) -->
+            <a href="#" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+                <img src="logo_jorginho.png" alt="Logo Centro Social Jorginho" class="h-16 md:h-20 w-auto drop-shadow-md">
             </a>
 
             <!-- Menu Desktop -->
@@ -113,17 +115,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div class="p-4">
-                    <!-- PLACEHOLDER NÚMERO REAL -->
                     <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900">+500</span>
                     <span class="text-sm font-medium text-slate-500 mt-1 block">Alunos Formados</span>
                 </div>
                 <div class="p-4">
-                    <!-- PLACEHOLDER NÚMERO REAL -->
                     <span class="block text-3xl sm:text-4xl font-extrabold text-brand-green">+1.200</span>
                     <span class="text-sm font-medium text-slate-500 mt-1 block">Atendimentos de Saúde</span>
                 </div>
                 <div class="p-4">
-                    <!-- PLACEHOLDER NÚMERO REAL -->
                     <span class="block text-3xl sm:text-4xl font-extrabold text-slate-900">+10</span>
                     <span class="text-sm font-medium text-slate-500 mt-1 block">Projetos & Parceiros</span>
                 </div>
@@ -145,11 +144,9 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- CARD CURSO 1 (Real: Gastronomia) -->
+                <!-- CARD CURSO 1 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                     <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 relative">
-                        <!-- PLACEHOLDER FOTO CURSO -->
                         <i class="fa-solid fa-utensils text-4xl"></i>
                         <span class="absolute top-3 right-3 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Inscrições Abertas</span>
                     </div>
@@ -162,18 +159,13 @@
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-brand-green"></i> [Duração: X Semanas]</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20Gastronomia." 
-                           target="_blank"
-                           class="w-full bg-slate-900 hover:bg-brand-green text-white font-bold py-3 rounded-xl transition-colors text-center block">
-                            Quero me Inscrever
-                        </a>
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20me%20inscrever%20no%20curso%20de%20Gastronomia." target="_blank" class="w-full bg-slate-900 hover:bg-brand-green text-white font-bold py-3 rounded-xl transition-colors text-center block">Quero me Inscrever</a>
                     </div>
                 </div>
 
-                <!-- CARD CURSO 2 (Real: Bolsas/Reforço) -->
+                <!-- CARD CURSO 2 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                     <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 relative">
-                        <!-- PLACEHOLDER FOTO CURSO -->
                         <i class="fa-solid fa-graduation-cap text-4xl"></i>
                         <span class="absolute top-3 right-3 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Fluxo Contínuo</span>
                     </div>
@@ -186,18 +178,13 @@
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-book-open text-brand-green"></i> Suporte Completo</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20informações%20sobre%20Bolsas%20e%20Supletivo." 
-                           target="_blank"
-                           class="w-full bg-slate-900 hover:bg-brand-green text-white font-bold py-3 rounded-xl transition-colors text-center block">
-                            Saber Mais
-                        </a>
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20informações%20sobre%20Bolsas%20e%20Supletivo." target="_blank" class="w-full bg-slate-900 hover:bg-brand-green text-white font-bold py-3 rounded-xl transition-colors text-center block">Saber Mais</a>
                     </div>
                 </div>
 
-                <!-- CARD CURSO 3 (Placeholder Generico para Proximo Curso) -->
+                <!-- CARD CURSO 3 -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                     <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400 relative">
-                        <!-- PLACEHOLDER FOTO CURSO -->
                         <i class="fa-solid fa-laptop-code text-4xl"></i>
                         <span class="absolute top-3 right-3 bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">Em Breve</span>
                     </div>
@@ -210,14 +197,9 @@
                                 <li class="flex items-center gap-2"><i class="fa-solid fa-clock text-brand-green"></i> [ Horário a definir ]</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20entrar%20na%20lista%20de%20espera%20dos%20novos%20cursos." 
-                           target="_blank"
-                           class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl transition-colors text-center block">
-                            Entrar na Lista de Espera
-                        </a>
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Quero%20entrar%20na%20lista%20de%20espera%20dos%20novos%20cursos." target="_blank" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl transition-colors text-center block">Entrar na Lista de Espera</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -269,9 +251,7 @@
                     </div>
 
                     <div class="pt-4">
-                        <a href="https://wa.me/5521969552215?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20de%20Saúde." 
-                           target="_blank" 
-                           class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-greenDark text-white font-bold px-6 py-3.5 rounded-xl shadow-md transition-all">
+                        <a href="https://wa.me/5521969552215?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20de%20Saúde." target="_blank" class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-greenDark text-white font-bold px-6 py-3.5 rounded-xl shadow-md transition-all">
                             <i class="fa-brands fa-whatsapp"></i> Agendar Atendimento
                         </a>
                     </div>
@@ -283,7 +263,6 @@
                         <p class="text-sm text-slate-600 mt-1">Garantindo a regularização civil e promovendo momentos marcantes para as famílias do bairro.</p>
                     </div>
                     
-                    <!-- PLACEHOLDER GALERIA/IMAGEM SAÚDE -->
                     <div class="h-64 bg-slate-300 rounded-2xl flex flex-col items-center justify-center text-slate-500 p-6 text-center">
                         <i class="fa-solid fa-heart text-4xl mb-2 text-slate-400"></i>
                         <span class="text-sm font-semibold">[ FOTO AÇÃO SOCIAL / CASAMENTO COMUNITÁRIO ]</span>
@@ -304,17 +283,13 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                
-                <!-- DEPOIMENTO PLACEHOLDER 1 -->
                 <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative">
                     <i class="fa-solid fa-quote-right text-3xl text-brand-green/30 absolute top-6 right-6"></i>
                     <p class="text-slate-300 italic mb-6">
                         "[ Insira o depoimento real do aluno aqui. Exemplo: O curso de culinária mudou a minha perspectiva. Consegui aplicar o aprendizado e abrir minha própria renda local! ]"
                     </p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-brand-green">
-                            [A1]
-                        </div>
+                        <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-brand-green">[A1]</div>
                         <div>
                             <h4 class="font-bold text-white">[ Nome do Aluno(a) ]</h4>
                             <span class="text-xs text-slate-400">Formado em Gastronomia Sustentável</span>
@@ -322,23 +297,19 @@
                     </div>
                 </div>
 
-                <!-- DEPOIMENTO PLACEHOLDER 2 -->
                 <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative">
                     <i class="fa-solid fa-quote-right text-3xl text-brand-green/30 absolute top-6 right-6"></i>
                     <p class="text-slate-300 italic mb-6">
                         "[ Insira o depoimento de um morador atendido na fisioterapia ou ação de saúde aqui. Exemplo: O atendimento de fisioterapia perto de casa fez toda a diferença para o meu dia a dia. ]"
                     </p>
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-brand-green">
-                            [M1]
-                        </div>
+                        <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-brand-green">[M1]</div>
                         <div>
                             <h4 class="font-bold text-white">[ Nome do Beneficiado ]</h4>
                             <span class="text-xs text-slate-400">Atendido na Fisioterapia Popular</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -357,14 +328,11 @@
                     Apoie o Centro Social Jorginho. Ao fortalecer a qualificação profissional da nossa comunidade, você ajuda a formar mão de obra capacitada e impulsiona a economia local do nosso bairro.
                 </p>
                 <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="https://wa.me/5521969552215?text=Olá!%20Sou%20comerciante/empresário%20em%20Ramos%20e%20gostaria%20de%20ser%20um%20parceiro." 
-                       target="_blank"
-                       class="bg-brand-green hover:bg-brand-greenDark text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
+                    <a href="https://wa.me/5521969552215?text=Olá!%20Sou%20comerciante/empresário%20em%20Ramos%20e%20gostaria%20de%20ser%20um%20parceiro." target="_blank" class="bg-brand-green hover:bg-brand-greenDark text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all">
                         Seja um Comércio Parceiro
                     </a>
                 </div>
 
-                <!-- PLACEHOLDER LOGOS PARCEIROS -->
                 <div class="pt-12">
                     <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Parceiros e Apoiadores Estratégicos</p>
                     <div class="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all">
@@ -384,10 +352,13 @@
             <div class="grid md:grid-cols-12 gap-8 pb-12 border-b border-slate-800">
                 
                 <div class="md:col-span-5 space-y-4">
-                    <div class="flex items-center gap-3">
-                        <img src="logo_jorginho.png" alt="Logo Centro Social Jorginho" class="h-12 w-auto">
+                    <!-- LOGO RODAPÉ (Com fundo branco para destacar a logo verde no fundo escuro) -->
+                    <div class="flex items-start gap-3">
+                        <a href="#" class="inline-block bg-white p-3 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105">
+                            <img src="logo_jorginho.png" alt="Logo Centro Social Jorginho" class="h-16 md:h-20 w-auto">
+                        </a>
                     </div>
-                    <p class="text-sm text-slate-400 max-w-sm">
+                    <p class="text-sm text-slate-400 max-w-sm mt-4">
                         Desenvolvendo autonomia, saúde e educação para a comunidade de Ramos, Itararé e região.
                     </p>
                 </div>
